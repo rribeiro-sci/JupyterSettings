@@ -1,10 +1,13 @@
+# __init__.py
+
 import pkgutil
 
-__all__ = []
+# Import the functions directly into the package namespace
 for loader, module_name, is_pkg in pkgutil.walk_packages(__path__):
-    __all__.append(module_name)
     _module = loader.find_module(module_name).load_module(module_name)
-    globals()[module_name] = _module
+    for name in dir(_module):
+        if not name.startswith('__'):
+            globals()[name] = getattr(_module, name)
 
 
 import sys, os, warnings
