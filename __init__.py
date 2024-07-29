@@ -1,10 +1,11 @@
 # __init__.py
-
+import importlib
 import pkgutil
 
 # Import the functions directly into the package namespace
 for loader, module_name, is_pkg in pkgutil.walk_packages(__path__):
-    _module = loader.find_module(module_name).load_module(module_name)
+    _module = importlib.import_module(f"{__name__}.{module_name}")
+   #_module = loader.find_module(module_name).load_module(module_name)
     for name in dir(_module):
         if not name.startswith('__'):
             globals()[name] = getattr(_module, name)

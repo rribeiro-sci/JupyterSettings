@@ -42,7 +42,13 @@ def CellSize(size):
     :parameter size: (int) percentage (eg: 98)
     """
     from IPython.display import display, HTML
-    display(HTML(f'<style>.container {{width: {size}% !important;}}<\style>'))
+    import notebook
+    if int(notebook.__version__.split('.')[0])>= 7:
+        #display(HTML(f'<style>.jp-WindowedPanel-outer {{padding-left: 2% !important; padding-right: 2% !important; width:{size}% !important;}} </style>'))
+        display(HTML(f'<style>.container {{width: {size}% !important;}}</style>'))
+
+
+    else: display(HTML(f'<style>.container {{width: {size}% !important;}}</style>'))
 
 def Retina():
     """
