@@ -2,6 +2,8 @@
 
 JupyterSettings is a Python library designed to simplify the management and customization of Jupyter Notebook settings. It provides a range of functionalities for configuring various aspects of Jupyter Notebooks to suit individual preferences and workflow needs.
 
+Work in Progress!!!
+
 ## Features
 
 - Customize Jupyter Notebook interface and appearance.
@@ -13,8 +15,10 @@ JupyterSettings is a Python library designed to simplify the management and cust
 
 ## Installation
 
-You can install JupyterSettings using pip:
+You can install JupyterSettings cloning the repo and installing with pip:
+
 
 ```bash
-pip install jupyter-settings
+
+pip install JupyterSetting -e
 

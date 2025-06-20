@@ -18,10 +18,10 @@
 """
 A Python library of functions for modifying Jupyter settings.
 """
-__author__ = "Rui Ribeiro"
-__email__ = "rui.ribeiro@univr.it"
 
-
+__author__ = "Rui P. Ribeiro"
+__email__ = "ruipedrofr@gmail.com"
+__version__ = "1.0.0"
 
 def AutoReload():
     """
@@ -53,9 +53,14 @@ def CellSize(size):
 
         else: display(HTML(f'<style>.container {{width: {size}% !important;}}</style>'))
     except: display(HTML(f'<style>.container {{width: {size}% !important;}}</style>'))
-     
 
-    
+def PlotlyNotebook():
+    """
+    Rendering plotly plots in notebooks.
+    """
+    import plotly.io as pio
+    pio.renderers.default = 'notebook'
+        
 def Retina():
     """
     Rendering matplotlib plots in high resolution.
