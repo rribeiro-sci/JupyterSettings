@@ -15,10 +15,20 @@ Work in Progress!!!
 
 ## Installation
 
-You can install JupyterSettings cloning the repo and installing with pip:
+To install this project in editable mode, follow these steps:
 
+1. Clone the repository:
 
-```bash
+   ```bash
+   git clone https://github.com/yourusername/JupyterSetting.git
+   ```
 
-pip install JupyterSetting -e
+2. Navigate to the project directory:
+    ```bash
+    cd JupyterSetting
+    ```
 
+3. Navigate to the project directory:
+    ```bash
+    pip install -e .
+    ```
